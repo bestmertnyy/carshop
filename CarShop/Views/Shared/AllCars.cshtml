@@ -1,0 +1,10 @@
+﻿@model CarShop.Data.Models.Car
+<div class="col-lg-4">
+    <img class="img-thumbnail" src=@Model.img alt="@Model.name" />
+    <h2>Модель: @Model.name</h2>
+    <p>@Model.shortDesc</p>
+    <p>Ціна: @Model.price.ToString("c")</p>
+    <p><a class="btn btn-warning" asp-controller="ShopCartController" asp-action="addToCart" asp-route-id="@Model.id">Купити</a></p>
+    <!--<p><a class="btn btn-warning" href="/ShopCart/Index">Купити</a></p>-->
+
+</div>
